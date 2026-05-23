@@ -22,13 +22,13 @@ background:#07111f;
 color:white;
 }
 
-/* NAVBAR */
+/* HEADER */
 
 header{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.75);
 backdrop-filter:blur(10px);
 padding:15px 7%;
 display:flex;
@@ -38,7 +38,8 @@ z-index:1000;
 }
 
 .logo img{
-height:60px;
+height:70px;
+border-radius:10px;
 }
 
 nav a{
@@ -58,7 +59,7 @@ color:#00d2ff;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.7)),
 url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=1600');
 background-size:cover;
 background-position:center;
@@ -111,11 +112,6 @@ background:#0097a7;
 transform:translateY(-5px);
 }
 
-.btn2{
-background:transparent;
-border:2px solid white;
-}
-
 /* FEATURES */
 
 .features{
@@ -134,6 +130,13 @@ border-radius:30px 30px 0 0;
 .feature{
 text-align:center;
 padding:20px;
+background:#f8fafc;
+border-radius:20px;
+transition:0.3s;
+}
+
+.feature:hover{
+transform:translateY(-10px);
 }
 
 .feature h3{
@@ -156,6 +159,10 @@ font-size:45px;
 margin-bottom:10px;
 }
 
+.section-title p{
+color:#cbd5e1;
+}
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -167,6 +174,7 @@ background:#111827;
 border-radius:20px;
 overflow:hidden;
 transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 .card:hover{
@@ -213,6 +221,7 @@ align-items:center;
 .about img{
 width:100%;
 max-width:350px;
+border-radius:20px;
 }
 
 .about-text h2{
@@ -252,6 +261,12 @@ text-align:center;
 color:#aaa;
 }
 
+.footer-logo img{
+height:60px;
+margin-bottom:15px;
+border-radius:10px;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
@@ -285,7 +300,7 @@ margin-top:15px;
 <header>
 
 <div class="logo">
-<img src="logo.png" alt="Sugho Sports Logo">
+<img src="logo.png.jpeg" alt="Sugho Sports Logo">
 </div>
 
 <nav>
@@ -303,15 +318,15 @@ margin-top:15px;
 
 <div class="hero-content">
 
-<h4>PREMIUM QUALITY</h4>
+<h4>PREMIUM SPORTSWEAR</h4>
 
-<h1>SPORTS UNIFORMS BUILT FOR <span>CHAMPIONS</span></h1>
+<h1>SPORTS UNIFORMS FOR <span>CHAMPIONS</span></h1>
 
-<p>Custom sports uniforms with premium fabric, modern designs and unmatched performance.</p>
+<p>
+Premium cricket, football, badminton and basketball uniforms with modern designs and high-quality fabric.
+</p>
 
 <a href="#products" class="btn">Explore Collection</a>
-
-<a href="#contact" class="btn btn2">Custom Order</a>
 
 </div>
 
@@ -323,22 +338,22 @@ margin-top:15px;
 
 <div class="feature">
 <h3>🏆 Premium Quality</h3>
-<p>Professional fabric & stitching.</p>
+<p>Top-quality stitching and breathable fabric.</p>
 </div>
 
 <div class="feature">
 <h3>🎨 Custom Designs</h3>
-<p>Your idea, our premium design.</p>
+<p>Design your own team uniforms professionally.</p>
 </div>
 
 <div class="feature">
 <h3>🚚 Fast Delivery</h3>
-<p>Quick delivery all across Pakistan.</p>
+<p>Fast shipping available across Pakistan.</p>
 </div>
 
 <div class="feature">
 <h3>💰 Team Discounts</h3>
-<p>Special prices for bulk orders.</p>
+<p>Special pricing for clubs and teams.</p>
 </div>
 
 </section>
@@ -367,11 +382,11 @@ margin-top:15px;
 
 <h3>Cricket Uniforms</h3>
 
-<p>Premium cricket kits for clubs and teams.</p>
+<p>Premium cricket jerseys and trousers for teams.</p>
 
 <div class="price">Rs. 3,500</div>
 
-<a href="#" class="btn">Shop Now</a>
+<a href="#" class="btn">Order Now</a>
 
 </div>
 
@@ -387,11 +402,11 @@ margin-top:15px;
 
 <h3>Football Kits</h3>
 
-<p>Modern football jerseys with breathable fabric.</p>
+<p>Modern football kits with premium fabric.</p>
 
 <div class="price">Rs. 4,000</div>
 
-<a href="#" class="btn">Shop Now</a>
+<a href="#" class="btn">Order Now</a>
 
 </div>
 
@@ -411,7 +426,7 @@ margin-top:15px;
 
 <div class="price">Rs. 2,800</div>
 
-<a href="#" class="btn">Shop Now</a>
+<a href="#" class="btn">Order Now</a>
 
 </div>
 
@@ -431,7 +446,7 @@ margin-top:15px;
 
 <div class="price">Rs. 4,500</div>
 
-<a href="#" class="btn">Shop Now</a>
+<a href="#" class="btn">Order Now</a>
 
 </div>
 
@@ -446,7 +461,7 @@ margin-top:15px;
 <section class="about" id="about">
 
 <div>
-<img src="logo.png" alt="Sugho Sports">
+<img src="logo.png.jpeg" alt="Sugho Sports">
 </div>
 
 <div class="about-text">
@@ -454,15 +469,15 @@ margin-top:15px;
 <h2>About Sugho Sports</h2>
 
 <p>
-At Sugho Sports, we provide premium sports uniforms with modern designs, high-quality stitching and performance fabrics.
-Our mission is to deliver comfort, style and durability for athletes across Pakistan.
+Sugho Sports provides premium-quality sports uniforms for teams, clubs and athletes across Pakistan.
+We specialize in modern sportswear with durable fabric, custom printing and professional designs.
 </p>
 
 <p>
 ✔ Premium Fabric<br>
-✔ Modern Designs<br>
+✔ Custom Team Designs<br>
 ✔ Comfortable Fit<br>
-✔ Durable & Long Lasting
+✔ Durable Quality
 </p>
 
 </div>
@@ -475,9 +490,9 @@ Our mission is to deliver comfort, style and durability for athletes across Paki
 
 <h2>Contact Us</h2>
 
-<p>WhatsApp: (+92)3351755515</p>
+<p>WhatsApp: 03XXXXXXXXX</p>
 
-<a href="https://wa.me/+923351755515" class="btn">
+<a href="https://wa.me/923XXXXXXXXX" class="btn">
 Order on WhatsApp
 </a>
 
@@ -486,6 +501,10 @@ Order on WhatsApp
 <!-- FOOTER -->
 
 <footer>
+
+<div class="footer-logo">
+<img src="logo.png.jpeg" alt="Sugho Sports Logo">
+</div>
 
 <p>© 2026 Sugho Sports | All Rights Reserved</p>
 
